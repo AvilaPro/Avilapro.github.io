@@ -1,0 +1,104 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+header{
+	height: 80px;
+	background: lightblue;
+	/*padding: 50px;
+	padding-top: 20px;
+	padding-left: 60px;
+	padding-bottom: 0;
+	padding-right: 10px;*/ /*padding:; 20px 10px 0 60px; describiendo los lados*/ /*padding: 20px 10px; el dearriba y los dos lados*/
+	padding: 20px;
+}
+figure{
+	width: 150px;
+	float: left;
+}
+form{
+	position: relative;
+	top: 10px;
+	left: 100px;
+	padding-top: 10px;
+}
+#buscar{
+	padding: 10px;
+}
+#boton{
+	padding: 10px;
+	background: orange;
+	border: 1px solid #2196F3;
+	border-radius: 10px;
+}
+nav{
+	padding-top: 30px;
+	float: right;
+}
+nav li{
+	background: #283593;
+	padding: 5px;
+	border: 2px solid white;
+	border-radius: 25px;
+	display: inline;
+}
+nav li a{
+	text-decoration: none;
+	color: #EC407A;
+}
+#principal{
+	width: 70%;
+	height: 700px;
+	background: #2196F3;
+	float: left;
+}
+article{
+	color: #BBDEFB;
+	width: 40%;
+	border: 1px solid orange;
+	float: left;
+	margin: 22px;
+	padding: 10px;
+	background: #0D47A1;
+
+}
+article img{
+	width: 200px;
+	float: right;
+}
+#banner{
+	height: 200px;
+	background: #00BCD4;
+}
+#banner h1{
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 50px;
+	left: 50px;
+	border-width: 5px;
+	border-style: none; /*solid, dashed, dotted, double, none */
+	border-color: orange;
+	border: 3px solid orange;
+}
+span{
+	border-left: 2px solid pink;
+}
+aside{
+	width: 30%;
+	background: #90CAF9;
+	float: right;
+	height: 700px;
+}
+footer{
+	height: 80px;
+	background: black;
+	text-align: center;
+	color: white;
+	clear: both;
+}
+#neg{
+	color: red;
+}
