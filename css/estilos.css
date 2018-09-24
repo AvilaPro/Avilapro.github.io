@@ -3,6 +3,9 @@
 	margin: 0;
 	border: 0;
 }
+body{
+	width: 500px;
+}
 #arriba{
 	background: #263238;
 	width: 100%;
