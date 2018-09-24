@@ -3,9 +3,6 @@
 	margin: 0;
 	border: 0;
 }
-body{
-	width: 500px;
-}
 #arriba{
 	background: #263238;
 	width: 100%;
@@ -93,6 +90,6 @@ p{
 	text-align: left;
 }
 #banner{
-	width: 100%;
+	width: 700px;
 	height: 500px;
 }
