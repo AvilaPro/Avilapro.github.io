@@ -56,14 +56,28 @@ nav ul{
 }
 nav li{
 	display: inline;
-	padding: 2px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-align: center;
+}
+nav li:hover{
+	background: #F8BBD0;
 }
 nav li a{
 	font-family: 'Raleway', sans-serif;
 	padding: 15px;
 	text-decoration: none;
 	color: white;
+}
+nav li:hover ul{
+	display: inline-block;
+}
+nav li ul{
+	position: absolute;
+	display: none;
+}
+nav li ul li{
+	display: block;
 }
 #marron{
 	padding: 16px;
