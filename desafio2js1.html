@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desafio 2 JS1</title>
+</head>
+<body>
+	<section>var i=0; <br>
+	var d=0;<br>
+	var e=0;<br>
+	var f=0;<br>
+	var A=25000;<br>
+	var B=50000;<br>
+	var C=68900;<br>
+	//var costo=0; decidi luego no inicializarla para al hacer el break se interrumpa el proceso.<br>
+	var recargo=0;<br>
+	var descuento=0;<br>
+	var impuesto=0;<br>
+	var precio=0;<br>
+	var subtotal=0;<br>
+	var subbtotal=0;<br>
+funa: do{<br>
+	var nombre=prompt("Ingrese el nombre del cliente:");<br>
+	console.log("nombre del cliente: "+nombre);<br>
+	if(nombre==null){<br>
+		if(confirm("Esta seguro que desea salir?")){<br>
+			alert("HASTA PRONTO");<br>
+			console.log(costo); //uso esta instruccion para que se cierre la compilacion.<br>
+		}<br>
+		else<br>
+			continue funa;<br>
+	}<br>
+	else<br>
+		if(nombre==""){<br>
+			alert("No debes dejar la casilla vacia");<br>
+			continue funa;<br>
+		}<br>
+		else<br>
+			if(!isNaN(nombre))<br>
+				alert("Debe escribir un nombre real, no numeros\n Usted escribio: "+nombre);<br>
+				else<br>
+					i=i+1;<br>
+}while(i<1)<br>
+fun1: do{<br>
+	var tipo=prompt("Ingrese el tipo de franela que el cliente desea comprar: \n (Recuerde que solo hay tipo A, B o C)");<br>
+	console.log("tipo de franela: "+tipo);<br>
+	if(tipo==null){<br>
+		if(confirm("Esta seguro que desea salir?")){<br>
+			alert("HASTA PRONTO");<br>
+			break;<br>
+		}<br>
+		else<br>
+			continue fun1;<br>
+	}<br>
+	else<br>
+		if(tipo==""){	<br>
+			alert("NO debes dejar la casilla vacia\nRECUERDE: Solo hay tres tipos de franelas: A, B o C");<br>
+			continue fun1;} //<- se incluyo esta instruccion porque sino al tratar de aplicar el metodo<br>
+	tipo=tipo.toUpperCase(); //toUpperCase() iba a dar un error y crearia un cierre abrupto del codigo<br>
+	console.log("tipo de franela: "+tipo);<br>
+	if(tipo==="A"){<br>
+		costo=A;<br>
+		d=d+1;<br>
+	}<br>
+		else<br>
+			if(tipo==="B"){<br>
+				costo=B;<br>
+				d=d+1;<br>
+			}<br>
+				else<br>
+					if(tipo==="C"){<br>
+						costo=C;<br>
+						d=d+1;<br>
+					}<br>
+					else<br>
+						alert("Debe escribir un tipo de franela valido (A, B o C)\n Usted <br>escribio:" +tipo);<br>
+}while(d<1)<br>
+console.log("costo: "+costo);<br>
+fun2: do{<br>
+	var origen=prompt("Ingrese el origen de la franela\n Nacional(N) o Importado(I):");<br>
+	console.log("origen: "+origen);<br>
+	if(origen==null){<br>
+		if(confirm("Esta seguro que desea salir?")){<br>
+			alert("HASTA PRONTO");<br>
+			break;<br>
+		}<br>
+		else<br>
+			continue fun2;<br>
+	}<br>
+	else<br>
+		if(origen==""){<br>
+			alert("NO debes dejar la casilla vacia\nRECUERDE: Seleccione (N) para Nacional o (I) para Importado");<br>
+			continue fun2;<br>
+		}<br>
+	origen=origen.toUpperCase();<br>
+	console.log("origen: "+origen);<br>
+	if(origen==="N"){<br>
+		recargo=1.25;<br>
+		orig="Nacional";<br>
+		e=e+1;<br>
+	}<br>
+		else<br>
+			if(origen==="I"){<br>
+				recargo=1.45;<br>
+				orig="Importado";<br>
+				e=e+1;<br>
+			}<br>
+			else<br>
+				alert("Usted escribio: "+origen+"\nDebe escribir un tipo de origen correcto, RECUERDE\n Nacional(N) o Importado(I)");<br>
+}while(e<1)<br>
+console.log("origen: "+origen);<br>
+console.log("orig: "+orig);<br>
+console.log("recargo: "+recargo);<br>
+fun3: do{ <br>
+	var cantidad=parseInt(prompt("Ingrese el numero de unidades que el cliente va a comprar:"));<br>
+		if(cantidad==null){ //esta instruccion esta de mas ya que al usuario darle cancelar<br>
+					if(confirm("Esta seguro que desea salir?")){ //la variable cantidad seria<br> 
+						alert("HASTA PRONTO"); //null, pero esto el compilador lo vera como<br>
+						break; //NaN y por ende no pasara por esta instruccion sino que ira <br>
+					} //directo al if(isNaN()). Pero lo dejo porsia XD<br>
+					else<br>
+						continue fun3;<br>
+					}<br>
+					else<br>
+						if(cantidad>=25){<br>
+							descuento=0.85;<br>
+							desc="15%";<br>
+							f=f+1;<br>
+						}<br>
+						else<br>
+							if(cantidad<=11 && cantidad>=6){<br>
+								descuento=0.95;<br>
+								desc="5%";<br>
+								f=f+1;<br>
+							}<br>
+								else<br>
+									if(isNaN(cantidad)){<br>
+										alert("NO debes dejar la casilla vacia o NO escribas <br>letras");<br>
+										continue fun3;<br>
+									}<br>
+									else<br>
+										if(cantidad===0){<br>
+											alert("FUE ABSURDO QUE LLEGARAS AQUI -.-");	<br>
+											break;<br>
+										}<br>
+										else{<br>
+											desc="0%";<br>
+											descuento=1;<br>
+											f=f+1;<br>
+										}<br>
+}while(f<1)<br>
+console.log("cantidad: "+cantidad);<br>
+console.log("descuento: "+descuento);<br>
+console.log("desc es: "+desc);<br>
+precio=(costo*recargo);<br>
+console.log("precio (costo*recargo): "+precio);<br>
+subtotal=(precio*cantidad);<br>
+console.log("subtotal (precio*cantidad): "+subtotal);<br>
+subbtotal=(subtotal*descuento);<br>
+console.log("subtotal ya con el descuento: "+subbtotal);<br>
+impuesto=subbtotal*0.12;<br>
+console.log("impuesto (aplicado al subtotal ya con el descuento): "+impuesto);<br>
+total=(subbtotal+impuesto);<br>
+console.log("el total a pagar es (subtotal+impuesto): "+total);<br>
+alert("Nombre del Cliente: "+nombre+"\nNumero de unidades solicitadas: "+cantidad+"\nTipo de franela solicitado: "+tipo+"\nEl origen de las franelas es: "+orig+"\nCantidad de franelas solicitado: "+cantidad+"\nPrecio unitario de la franela: "+precio+"\nSUbtotal a pagar: "+subtotal+"\nSe le asigno un descunto del: "+desc+"\nQue al aplicarlo al subtotal este queda en : "+subbtotal+"\nEl impuesto (12%) es: "+impuesto+"\nEl total a pagar es: "+total);<br>
+
+</section>
+
+</body>
+</html>
