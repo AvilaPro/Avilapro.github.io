@@ -246,9 +246,9 @@ Proceso
 					i=i+1
 					Sino 
 						Si(user=c2.getUsuario() Y pass=c2.getContraseña()) entonces
-							c1.Indicar_info_cliente()
-							c1.Mostrar_datos_cuenta()
-							c1.Mostrar_datos_tarjeta()
+							c2.Indicar_info_cliente()
+							c2.Mostrar_datos_cuenta()
+							c2.Mostrar_datos_tarjeta()
 							i=i+1
 							Sino 
 								Mostrar "Alguno de los datos ingresados es erroneo, por favor verificar"
