@@ -1,0 +1,13 @@
+Enunciado de la tarea 4 de la sección 2695
+
+El Consejo Nacional Electoral desea conocer si un elector puede formar parte del grupo de observadores, a tal efecto, evalúa los siguientes requisitos: ser venezolano y mayor de edad. De estar trabajando se le cancelará un bono del 10% de su sueldo, si no trabaja, se le cancelarán 180 Bs, en ningún caso un observador podrá percibir menos de esa cantidad.
+ 
+1.- Analizar correctamente el problema, identificando: datos necesarios, acciones de entrada/proceso/salida, módulos, variables, y parámetros necesarios con identificadores significativos y la declaración en donde corresponda.
+
+2.- Implementar el algoritmo completamente modular apegándose a la singularidad de propósito, manejando los parámetros por valor y por referencia según corresponda.
+
+3.- Implementar un módulo como función para determinar la elegibilidad de la persona.
+
+4.- Realizar el diagrama jerárquico de los módulos
+
+5.- Cumplir con las reglas sintácticas, generar todas las salidas requeridas de forma correcta y documentar el código donde sea necesario.
