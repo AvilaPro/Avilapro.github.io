@@ -1,0 +1,294 @@
+//Definir la clase instrumento bancario que sea abstracta
+Abstracta Clase instrumento_bancario
+	protegido definir tipo como caracter
+	protegido definir saldo como real 
+Fin Clase
+
+//Definir la clase cuenta bancaria
+Clase cuenta_bancaria extiende instrumento_bancario
+	publico definir numero_cta como string
+
+	publico Metodo cuenta_bancaria()
+		tipo=""
+		numero_cta= "0000-0000-0000-0000-0000"
+		saldo=0
+	Fin Metodo
+
+Fin Clase
+//Definir la clase tarjeta de credito
+Clase tarjeta_credito extiende instrumento_bancario
+	publico definir numero_tarjeta como string
+
+	publico Metodo tarjeta_credito()
+		tipo=""
+		numero_tarjeta="0000-0000-0000-0000"
+		saldo=0
+	Fin Metodo
+Fin Clase
+//Definir la clase creditos bancarios
+Clase credito_bancario extiende instrumento_bancario
+	publico definir nombre_credito como caracter //asumiendo que se registrar con nombre y no con numero.
+
+	publico Metodo credito_bancario()
+		tipo=""
+		nombre_credito="N/A"
+		saldo=0
+	Fin Metodo
+Fin Clase
+
+//Definir la clase cliente
+Clase cliente
+	privado definir nombre como caracter
+	privado definir cedula_rif como alfanumerico
+	privado definir tipo_cliente como caracter
+	privado definir nacimiento como fecha
+	publico definir n_nombre como caracter
+	publico definir n_cedula_rif como alfanumerico
+	publico definir n_tipo_cliente como caracter
+	publico definir n_nacimiento como fecha
+	publico definir cuenta_banc como coleccion<cuenta_bancaria>
+	publico definir tarj_cred como coleccion<tarjeta_credito>
+	publico definir credit_banc como coleccion<credito_bancario>
+
+	Publico Metodo setNombre(n_nombre) como alfanumerico
+		nombre=n_nombre
+	Fin Metodo
+	Publico Metodo getNombre() como alfanumerico
+		return=nombre
+	Fin Metodo
+
+	Publico Metodo setCedula(n_cedula_rif) como alfanumerico
+		cedula_rif=n_cedula_rif
+	Fin Metodo
+	Publico Metodo getCedula() como alfanumerico
+		return=cedula_rif
+	Fin Metodo
+
+	Publico Metodo setTipocliente(n_tipo_cliente) como alfanumerico
+		tipo_cliente=n_tipo_cliente
+	Fin Metodo
+	Publico Metodo getTipocliente() como alfanumerico
+		return=tipo_cliente
+	Fin Metodo
+
+	Publico Metodo setNacimiento(n_nacimiento) como alfanumerico
+		nacimiento=n_nacimiento
+	Fin Metodo
+	Publico Metodo getNacimiento() como alfanumerico
+		return=nacimiento
+	Fin Metodo
+
+	//Constructor
+
+	Publico Metodo cliente()
+		nombre= ""
+		cedula_rif= "V-"
+		tipo_cliente= "natural"
+		nacimiento= null 
+	Fin Metodo
+
+	Publico Metodo cliente(n_nombre, n_cedula_rif, n_tipo_cliente, n_nacimiento)
+		nombre=n_nombre
+		tipo_cliente=n_tipo_cliente
+		cedula_rif= Mayusculas(Subcadena(n_tipo_cliente,1,1))+"-"+n_cedula_rif
+		nacimiento= n_nacimiento
+	Fin Metodo
+
+	Publico Metodo registrar_datos_cliente()
+		mostrar "Ingrese el nombre del cliente"
+		Leer n_nombre
+		setNombre(n_nombre)
+		mostrar "Ingrese el tipo de cliente a procesar"
+		"Naturales, Juridicos, Sociedades Anonimas, Gubernamentales"
+		Leer n_tipo_cliente
+		setTipocliente(n_tipo_cliente)
+		n_tipo_cliente=Mayusculas(Subcadena(n_tipo_cliente,1,1))
+		Si n_tipo_cliente="N" entonces
+			mostrar "ingrese el numero de cedula del cliente: "
+			Leer n_cedula_rif
+			setCedula(n_cedula_rif)
+		FinSi
+		Si n_tipo_cliente="J" entonces
+			mostrar "ingrese el numero del Rif del cliente: "
+			Leer n_cedula_rif
+			setCedula(n_cedula_rif)
+		FinSi
+		mostrar "Ingrese la fecha de nacimiento del cliente"
+		Leer n_nacimiento
+		setNacimiento(n_nacimiento)
+	Fin Metodo
+
+	Publico Metodo registrar_cuenta_bancaria()
+		definir cantidad como entero
+		definir ntipo como caracter
+		definir nnumero_cta como string
+		definir nsaldo como real
+		mostrar "ingrese el numero de cuentas de cuentas bancarias a ser"
+		+"registradas al cliente"
+		Leer cantidad
+		Para i=0 hasta i<cantidad hacer
+			cuenta_banc.agregar(nuevo cuenta_bancaria())
+			definir cuenta[i] como cuenta_bancaria
+			cuenta[i]= nuevo cuenta_bancaria
+			cuenta_banc.agregar(cuenta[i])
+
+			mostrar "ingrese el tipo de cuenta bancaria"
+			+" ya sea ahorro, corriente o electrónica"
+			leer ntipo
+			cuenta_banc[i].tipo=ntipo
+
+			mostrar "ingrese el numero de cuenta asignado a esa cuenta"
+			leer nnumero_cta
+			cuenta_banc[i].numero_cta=nnumero_cta
+
+			mostrar "ingrese el saldo de la cuenta"
+			leer nsaldo
+			cuenta_banc[i].saldo=nsaldo
+		Fin Para
+	Fin Metodo
+
+	Publico Metodo registrar_tarjeta_credito()
+		definir cantidad como entero
+		definir ntipo como caracter
+		definir nnumero_tarjeta como string
+		definir nsaldo como real
+		mostrar "ingrese el numero de tarjetas de credito a ser"
+		+"registradas al cliente"
+		Leer cantidad
+		Para i=0 hasta i<cantidad hacer
+			tarj_cred.agregar(nuevo tarjeta_credito())
+			definir tarjeta[i] como tarjeta_credito
+			tarjeta[i]= nuevo tarjeta_credito
+			tarj_cred.agregar(tarjeta[i])
+
+			mostrar "ingrese el tipo de cuenta bancaria"
+			+" ya sea Visa, masterCard o American Express"
+			leer ntipo
+			tarj_cred[i].tipo=ntipo
+
+			mostrar "ingrese el numero de tarjeta asignado a esa tarjeta"
+			leer nnumero_cta
+			tarj_cred[i].numero_tarjeta=nnumero_tarjeta
+
+			mostrar "ingrese el saldo de la cuenta"
+			leer nsaldo
+			tarj_cred[i].saldo=nsaldo
+		Fin Para
+	Fin Metodo
+
+	Publico Metodo registrar_credito_bancario()
+		definir cantidad como entero
+		definir ntipo como caracter
+		definir nnombre_credito como caracter
+		definir nsaldo como real
+		mostrar "ingrese el numero de creditos bancarios a ser"
+		+"registradas al cliente"
+		Leer cantidad
+		Para i=0 hasta i<cantidad hacer
+			credit_banc.agregar(nuevo credito_bancario())
+			definir credito[i] como credito_bancario
+			credito[i]= nuevo credito_bancario
+			credit_banc.agregar(credito[i])
+
+			mostrar "ingrese el tipo de cuenta bancaria"
+			+" ya sea Visa, masterCard o American Express"
+			leer ntipo
+			credit_banc[i].tipo=ntipo
+
+			mostrar "ingrese el numero de tarjeta asignado a esa tarjeta"
+			leer nnumero_cta
+			credit_banc[i].nombre_credito=nnombre_credito
+
+			mostrar "ingrese el saldo de la cuenta"
+			leer nsaldo
+			credit_banc[i].saldo=nsaldo
+		Fin Para
+	Fin Metodo
+
+	Publico Metodo mostrar_datos_cliente()
+		mostrar "Los datos del cliente son: "
+		mostrar "Nombre: " +getNombre
+		mostrar "Cedula/Rif: " +getCedula
+		mostrar "tipo de cliente: " +getTipocliente
+		mostrar "Fecha de nacimiento del cliente: " +getNacimiento
+	Fin Metodo
+
+	Publico Metodo cantidad() como entero
+		cant_cta=cuenta_banc.tamaño()
+		return cant_cta
+		cant_tarj=tarj_cred.tamaño()
+		return cant_tarj
+		cant_cred=credit_banc.tamaño()
+		return cant_cred
+	Fin Metodo
+
+	Publico Metodo ver_cuenta_bancaria()
+		cant_cta=cuenta_banc.tamaño()
+		mostrar "EL cliente tiene las siguientes cuentas bancarias registradas"
+		para i=0 hasta i=cant_cta hacer
+			mostrar cuenta_banc[i].tipo
+			mostrar cuenta_banc[i].numero_cta
+			mostrar cuenta_banc[i].saldo
+		fin para
+	Fin Metodo
+
+	Publico Metodo ver_tarjetas_credito()
+		cant_tarj=tarj_cred.tamaño()
+		mostrar "EL cliente tiene las siguientes tarjetas de credito registradas"
+		para i=0 hasta i=cant_cta hacer
+			mostrar tarj_cred[i].tipo
+			mostrar tarj_cred[i].numero_cta
+			mostrar tarj_cred[i].saldo
+		fin para
+	Fin Metodo
+
+	Publico Metodo ver_creditos_bancarios()
+		cant_tarj=credit_banc.tamaño()
+		mostrar "EL cliente tiene las siguientes tarjetas de credito registradas"
+		para i=0 hasta i=cant_cta hacer
+			mostrar credit_banc[i].tipo
+			mostrar credit_banc[i].nombre
+			mostrar credit_banc[i].saldo
+		fin para
+	Fin Metodo
+
+Fin Clase
+
+ALGORITMO
+	definir resp_cta, resp_tarj, resp_cred, resp_ins como caracter
+
+	definir cliente como cliente
+
+	cliente = nuevo Cliente()
+
+	cliente.registrar_datos_cliente()
+
+	mostrar "Desea asignarle cuentas bancarias a este cliente?"
+	leer resp_cta
+	Si (resp_cta = "si") entonces
+		cliente.registrar_cuenta_bancaria()
+	Fin Si
+
+	mostrar "Desea asignarle tarjetas de credito a este cliente?"
+	leer resp_tarj
+	Si (resp_tarj.registrar_tarjeta_credito()
+	Fin Si
+
+	mostrar "Desea asignarle creditos a este cliente?"
+	leer resp_cred
+	Si (resp_cred = "si") entonces
+		cliente.registrar_credito_bancario()
+	Fin Si
+
+	mostrar "Desea ver todos los datos de los instrumentos bancarios del cliente?"
+	leer resp_ins
+	Si (resp_ins = "si") entonces
+		cliente.ver_cuenta_bancaria()
+		cliente.ver_tarjetas_credito()
+		cliente.ver_creditos_bancarios()
+	Fin Si
+FIN ALGORITMO
+
+
+
+
