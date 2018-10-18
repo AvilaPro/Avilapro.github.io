@@ -271,7 +271,8 @@ ALGORITMO
 
 	mostrar "Desea asignarle tarjetas de credito a este cliente?"
 	leer resp_tarj
-	Si (resp_tarj.registrar_tarjeta_credito()
+	Si (resp_tarj = "si") entonces
+		cliente.registrar_tarjeta_credito()
 	Fin Si
 
 	mostrar "Desea asignarle creditos a este cliente?"
