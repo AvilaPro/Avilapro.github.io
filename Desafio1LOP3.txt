@@ -51,7 +51,7 @@ Subproceso Incrementar_Contadores(Num_Ing,Cant_Num Por Referencia,Cant_Num_200_4
 	acumulador=acumulador+Num_Ing
 FinSubProceso
 
-SubProceso Uno()
+SubProceso Uno(Cant_Num Por Referencia, Cant_Num_200_400 Por Referencia, Cant_Num_Par Por Referencia, acumulador Por Referencia, acumulador_par Por Referencia)
 	Repetir
 		Leer_Datos(Num_Ing)
 		Incrementar_Contadores(Num_Ing, Cant_Num, Cant_Num_200_400, Cant_Num_Par, acumulador, acumulador_par )
@@ -95,7 +95,7 @@ Algoritmo Desafio1LOP3
 		Mostrar "Ingrese la opción... " Sin Saltar
 		Leer opc_menu
 		Segun opc_menu Hacer
-			1: Uno()
+			1: Uno(Cant_Num,Cant_Num_200_400,Cant_Num_Par,acumulador,acumulador_par)
 			2: Mostrar_Resultados(Cant_Num,Cant_Num_200_400,Cant_Num_Par,acumulador,acumulador_par)
 			3: Mostrar "Usted escogió salir del sistema."
 			De Otro Modo:
