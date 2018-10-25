@@ -1,0 +1,243 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+	header{
+		min-height: 150px;
+		margin-bottom: 15px;
+	}
+	.encabezado-fondo{
+		min-height: 150px;
+		background: none;
+		padding-top: 15px;
+	}
+	.encabezado{
+		width: 98%;
+		height: 140px;
+		background-color: none;
+		margin-left: 10px;
+		display: inline-flex;
+		text-align: center;
+	}
+	.logo{
+		width: 20%;
+		height: 100%;
+		background-color: #90CAF9;
+		margin-right: 5%;
+	}
+	.navegador{
+		width: 80%;
+		height: 100%;
+		background: #90CAF9;
+		position: relative;
+	}
+	.seccion1{
+		height: 225px;
+		background: none;
+		width: 100%;
+	}
+	.contenido{
+		width: 98%;
+		height: 90%;
+		margin: 10px;
+		background: #1E88E5;
+		text-align: center;
+	}
+	.p1{
+		font-size: 150px;
+		position: relative;
+		top: 10px;
+		color: white;
+	}
+	.seccion2{
+		width: 100%;
+		/*height: 450px;*/
+		background: none;
+		display: inline-flex;
+	}
+	.sec1{
+		/*width: 64%;*/
+		/*display: inline-flex;*/
+		/*height: 450px;*/
+	}
+	.art2{
+		width: 50%;
+		/*min-height: 90%;*/
+		margin: 10px;
+		text-align: center;
+		background: #D84315;	
+	}
+	.art3{
+		width: 50%;
+		/*min-height: 90%;*/
+		margin: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		background: #7CB342;
+	}
+	.sec2{
+		/*width: 32%;
+		min-height: 450px;*/
+	}
+	.art4{
+		/*width: 100%;*/
+		min-height: 95%;
+		margin: 10px;
+		text-align: center;
+		background: #311B92;	
+	}
+	.p2{
+		font-size: 150px;
+		position: relative;
+		top: 100px;
+		color: white;
+	}
+
+@media (min-width: 0px){
+	header{
+		min-height: 75px;
+	}
+	.encabezado-fondo{
+		min-height: 75px;
+	}
+	.encabezado{
+		height: 65px;
+	}
+	.logo{
+		display: none;
+	}
+	.navegador{
+		width: 100%;
+	}
+	.seccion1{
+		height: 120px;
+	}
+	.p1{
+		font-size: 75px;
+	}
+	.seccion2{
+		min-height: 225px;
+		display: inline-block;
+	}
+	.sec1{
+		min-height: 150px;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.art2{
+		width: 100%;
+	}
+	.art3{
+		width: 100%;
+		margin: 10px;
+	}
+	.sec2{
+		min-height: 75px;
+		width: 100%;
+	}
+	.art4{
+		width: 100%;
+	}
+	.p2{
+		font-size: 75px;
+		top: 10px;
+	}
+}
+
+@media (min-width: 321px)	{
+	header{
+		min-height: 100px;
+	}
+	.encabezado-fondo{
+		min-height: 100px;
+	}
+	.encabezado{
+		height: 90px;
+	}
+	.logo{
+		display: block;
+	}
+	.seccion2{
+		width: 100%;
+		display: inline-block;
+		height: 450px;
+	}
+	.sec1{
+		display: inline-flex;
+		width: 100%;
+		height: 225px;
+	}
+	.art2{
+		width: 45%;
+		height: 225px;
+	}
+	.art3{
+		width: 45%;
+		margin-right: 0;
+		height: 225px;
+	}
+	.sec2{
+		width: 100%;
+		height: 225px;
+	}
+	.art4{
+		width: 100%;
+		height: 225px;
+	}
+	.p2{
+		font-size: 50px;
+		top: 10px;
+	}
+}
+
+@media (min-width: 1024px){
+	.seccion2{
+		width: 100%;
+		/*height: 450px;*/
+		background: none;
+		display: inline-flex;
+	}
+	.sec1{
+		width: 64%;
+		display: inline-flex;
+		height: 450px;
+	}
+	.art2{
+		width: 50%;
+		min-height: 90%;
+		margin: 10px;
+		text-align: center;
+		background: #D84315;	
+	}
+	.art3{
+		width: 50%;
+		min-height: 90%;
+		margin: 5px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		background: #7CB342;
+	}
+	.sec2{
+		width: 32%;
+		min-height: 450px;
+	}
+	.art4{
+		width: 100%;
+		min-height: 90%;
+		margin: 10px;
+		text-align: center;
+		background: #311B92;	
+	}
+	.p2{
+		font-size: 150px;
+		position: relative;
+		top: 100px;
+		color: white;
+	}
+
+}
