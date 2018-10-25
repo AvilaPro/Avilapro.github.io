@@ -72,7 +72,7 @@
 	.art3{
 		width: 50%;
 		/*min-height: 90%;*/
-		margin: 5px;
+		/*margin: 5px;*/
 		margin-top: 10px;
 		margin-bottom: 10px;
 		text-align: center;
@@ -172,25 +172,26 @@
 		height: 225px;
 	}
 	.art2{
-		width: 45%;
+		width: 48%;
 		height: 225px;
 	}
 	.art3{
-		width: 45%;
+		width: 48%;
 		margin-right: 0;
 		height: 225px;
 	}
 	.sec2{
+		margin-top: 40px;
 		width: 100%;
 		height: 225px;
 	}
 	.art4{
-		width: 100%;
+		width: 98%;
 		height: 225px;
 	}
 	.p2{
-		font-size: 50px;
-		top: 10px;
+		font-size: 90px;
+		top: 60px;
 	}
 }
 
@@ -223,21 +224,73 @@
 		background: #7CB342;
 	}
 	.sec2{
-		width: 32%;
+		width: 34%;
 		min-height: 450px;
+		margin-top: 0px;
 	}
 	.art4{
 		width: 100%;
 		min-height: 90%;
 		margin: 10px;
 		text-align: center;
-		background: #311B92;	
+		background: #311B92;
+			
 	}
 	.p2{
-		font-size: 150px;
+		font-size: 120px;
 		position: relative;
 		top: 100px;
 		color: white;
 	}
+}
 
+@media print{
+	.logo{
+		background: black;
+	}
+	.navegador{
+		background: black;
+	}
+	.contenido{
+		background: black;
+	}
+	.art2{
+		background: black;
+	}
+	.art3{
+		background: black;
+	}
+	.art4{
+		background: black;
+	}
+}
+
+@media (min-width: 1200px) and (orientation: landscape){
+	body{
+		background: blue;
+	}
+	.logo{
+		background: white;
+	}
+	.navegador{
+		background: white;
+	}
+	.contenido{
+		background: white;
+	}
+	.art2{
+		background: white;
+	}
+	.art3{
+		background: white;
+	}
+	.art4{
+		background: white;
+	}
+	.p1{
+		color: black;
+	}
+	.p2{
+		color: black;
+	}
 }
