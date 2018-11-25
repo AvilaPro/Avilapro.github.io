@@ -1,0 +1,127 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+#arriba{
+	background: #263238;
+	width: 100%;
+	height: 30px;
+}
+section p{
+	padding-top: 4px;
+	text-align: center;
+	color: white;
+}
+header{
+	background: white;
+	width: : 100%;
+	height: 160px;
+	padding: 0;
+
+}
+figure{
+	float: left;
+}
+#logo{
+	width: 140px;
+	height: 120px;
+	position: absolute; 
+	left: 100px;
+	top: 40px;
+}
+#barra{
+	width: 87%;
+	height: 50px;
+	background: #F5769F;
+	position: absolute; 
+	left: 100px;
+	top: 163px;
+	z-index: 1;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+nav{
+	height: 100%;
+	padding-top: 0px;
+	float: left;
+	
+}
+nav ul{
+	padding-top: 15px;
+	padding-bottom: 0;
+}
+nav ul li{
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+nav li:hover{
+	background: #F06292;
+}
+nav li a{
+	font-family: 'Raleway', sans-serif;
+	padding: 15px;
+	text-decoration: none;
+	color: white;
+}
+nav li:hover ul{
+	display: block;
+}
+nav li ul{
+	position: absolute;
+	display: none;
+	text-align: center;
+	left: 104px;
+}
+nav li ul li{
+	width: 124.2px;
+	padding-left: 0px;
+	padding-right: 0px;
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	background-color: #F5769F;
+	color: white;
+}
+nav li ul li a{
+
+}
+#marron{
+	padding: 16px;
+	padding-bottom: 17px;
+	background: #8E5C51;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px; 
+}
+#sigue{
+	position: absolute;
+	right: 150px;
+	top: 60px;
+	float: right;
+	width: 160px;
+	height: 80px;
+}
+#logos{
+	display: inline;
+}
+.loguito{
+	width: 50px;
+}
+p{
+	font-family: 'Raleway', sans-serif;
+	text-align: left;
+}
+#banner{
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+#imgbanner{
+	width: 100% /*mejora para que la imagen se centre y no se expanda demasiado*/
+}
