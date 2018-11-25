@@ -120,6 +120,9 @@ footer{
     #infos{
         height: 1400px;
     }
+    #mapa{
+        height: 260px;;
+    }
 }
 @media(max-width:768px){
     #infos{
