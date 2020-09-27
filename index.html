@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/9a7d0d2735.js" crossorigin="anonymous"></script>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> -->
+  <title>Eduardo Mejias</title>
+</head>
+<body>
+  <div id="mySidenav" class="hidenav">
+    <div class="cont-hidenav font-principal">
+      <a href="#myskills">My Skills</a>
+      <a href="#experience">Experiencie</a>
+      <a href="#aboutme">About Me</a>
+    </div>
+  </div>
+  <div class="sidenav">
+    <div class="nav">
+      <div class="i-nav logo"><img src="./img/Logo3_sf.png" alt="logo"></div>
+      <div class="i-nav button-collapse">
+        <div id="myNavButton"  class="c-b-collapse" onclick="myFunction(this), openNav()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+      <div class="i-nav nets">
+        <a class="a-nets" href="#">
+          <img src="./img/github3.PNG" alt="github">
+        </a>
+        <a class="a-nets" href="#">
+          <img src="./img/facebook1.png" alt="facebook">
+        </a>
+        <a href="#" class="a-nets">
+          <img src="./img/twitter1.png" alt="twitter">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="c1">
+      <div class="c11">
+        <div class="c111">
+          <div class="e-logo"><img src="./img/Logo2_sf.png" alt="logo1"></div>
+          <div class="title font-principal">
+            <div>Creator</div>
+            <div>Designer</div>
+            <div>Developer</div>
+            <div>Programmer</div>
+          </div>
+          <div class="subtitle font-normal">Creating marvelous user experience</div>
+          <div class="subtitle font-normal">for your brand, seamlessly.</div>          
+        </div>
+        <div class="c112">
+          <a href="#myskills">
+            <button class="button-title button-gray font-terciary">MY SKILLS</button>
+          </a>
+          <a href="#experience">
+            <button class="button-title button-white font-terciary">EXPERIENCE</button>
+          </a>
+        </div>
+      </div>
+      <div class="c12">
+        <div id="carousel">
+          <button id="retroceder" style="display: none;"></button>
+          <div id="imagen1" class="fade imagen" style="background-image: url(./img/selfie.PNG)"></div>
+          <div id="imagen2" class="fade imagen" style="background-image: url(./img/pic2.PNG)"></div>
+          <div id="imagen3" class="fade imagen" style="background-image: url(./img/pic3.jpg)"></div>
+          <div id="imagen4" class="fade imagen" style="background-image: url(./img/pic4.jpg)"></div>
+          <button id="avanzar" style="display: none;"></button>
+        </div>
+        <div class="controls-carousel" style="display: none;">
+          <button disabled="disabled" id="play" style="display: none;"></button>
+          <button disabled="disabled" id="stop" style="display: none;"></button>
+        </div>
+      </div>
+    </div>
+    <div class="c4">
+      <div class="c41 title font-principal">
+        <div id="myskills">My Skills</div>
+      </div>
+    </div>
+    <div id="c5">
+      <div class="51 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/HTML.png" alt="html">
+          </div>
+          <div class="flip-card-back">
+            <h1>HTML</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="52 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/bootstrap.png" alt="bootstrap">
+          </div>
+          <div class="flip-card-back">
+            <h1>Bootstrap</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="53 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/angular.png" alt="angular">
+          </div>
+          <div class="flip-card-back">
+            <h1>Angular</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="54 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/php.png" alt="php">
+          </div>
+          <div class="flip-card-back">
+            <h1>PHP</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="55 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/css.png" alt="css">
+          </div>
+          <div class="flip-card-back">
+            <h1>CSS</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="56 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/git.png" alt="git">
+          </div>
+          <div class="flip-card-back">
+            <h1>GIT</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="57 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/ionic.png" alt="ionic">
+          </div>
+          <div class="flip-card-back">
+            <h1>Ionic</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="58 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/mysql.png" alt="mysql">
+          </div>
+          <div class="flip-card-back">
+            <h1>My SQL</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="59 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/js.png" alt="Javascript">
+          </div>
+          <div class="flip-card-back">
+            <h1>JavaScript</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="5-10 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/sass.png" alt="sass">
+          </div>
+          <div class="flip-card-back">
+            <h1>Sass</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="5-11 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/vue.png" alt="vue">
+          </div>
+          <div class="flip-card-back">
+            <h1>Vue js</h1> 
+          </div>
+        </div>
+      </div>
+      <div class="5-12 flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./img/laravel.PNG" alt="laravel">
+          </div>
+          <div class="flip-card-back">
+            <h1>Laravel</h1> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c4">
+      <div class="c41 title font-principal">
+        <div id="experience">Experience</div>
+      </div>
+    </div>
+    <div id="c6">
+      <div class="cont-2b">
+        <div class="c2b1">
+          <img src="./img/pic2.PNG" alt="dando_clases">
+        </div>
+        <div class="c2b2">
+          <h1>Professor</h1>
+          <p>I am a professor at a software academy where I teach HTML, CSS, Javascript, Git, Programming Logic, Bootstrap, Angular and Ionic.</p>
+        </div>
+      </div>
+      <div class="cont-2b">
+        <div class="c2b1">
+          <h1>Layout Designer</h1>
+          <p>Template builder in HTML and CSS, also implementing Bootstrap where the case has required it, work done as a freelance.</p>
+        </div>
+        <div class="c2b2">
+          <img src="./img/layouts1.PNG" alt="layouts">
+        </div>
+      </div>
+      <div class="cont-2b">
+        <div class="c2b1">
+          <img src="./img/appionic.PNG" alt="appIonic">
+        </div>
+        <div class="c2b2">
+          <h1>Mobile App</h1>
+          <p>Mobile Application Development with Ionic with database supported with Firebase</p>
+        </div>
+      </div>
+    </div>
+    <div id="c2">
+      <div id="c21" class="title font-principal">
+        <div id="aboutme">About Me</div>
+      </div>
+    </div>
+    <div id="c3">
+      <div class="c31 c3-son align-rh">
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">My name is Eduardo Mejias Avila, I am 32 years old (I was born on 02/21/1988).</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">I am Venezuelan, I was born in a beautiful city called Barquisimeto.</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">I am married to a wonderful woman, her name is Marbelys E. Guedez. We don't have children yet, but we hope to have them when God wants it.</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">I like to stay in constant learning and share what I have learned with others.</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">I consider myself a person of faith, I believe in God and in our Lord Jesus Christ.</div>
+        </div>
+        <div class="c32 c3-son">
+          <div class="c321"></div>
+          <div class="c322"></div>
+          <div class="c323"></div>
+          <div class="c324"></div>
+        </div>
+        <div class="c33 c3-son align-lh">
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">That is why I have served God for 15 years in the First Baptist Church of Barquisimeto, I am a teacher and preacher, in addition to being the minister of worship.</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">Interacting with groups of people in different settings, be it in my community, at church, at work or wherever I go is one of the things that I enjoy.</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">I like to read, go to the cinema, travel and see new places</div>
+          <div class="font-normal subtitle f-italic p-big box-border-bottom">Creating, designing, programming and developing applications is my passion.</div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+  function myFunction(x) {
+    x.classList.toggle("change");
+    x.addEventListener("click", closeNav, false);
+  }
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "50%";
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("myNavButton").removeEventListener("click", closeNav, false);
+    document.getElementById("myNavButton").addEventListener("click", openNav, false);
+  }
+  </script>
+  <script src="./js/control.js"></script>
+</body>
+</html>
